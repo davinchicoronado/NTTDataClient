@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+        ">
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+    <util:map id="clientsNTTData" map-class="java.util.concurrent.ConcurrentHashMap">
+        <entry key="23445322C">
+            <bean class="com.nttdata.client.rest.NTTDataClients.data.Client">
+                <property name="id" value="23445322" />
+                <property name="firstName" value="Miguel" />
+                <property name="secondName" value="Andres" />
+                <property name="firstSurname" value="Gonzalez" />
+                <property name="secondSurname" value="Fuquene" />
+                <property name="phone" value="7777777" />
+                <property name="address" value="Calle 85b 90-25" />
+                <property name="cityResidence" value="Bogotá" />
+                <property name="typeDocument" value="C" />
+            </bean>
+        </entry>
+    </util:map>
+</beans>
